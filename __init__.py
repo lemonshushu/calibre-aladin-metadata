@@ -9,16 +9,6 @@ from calibre.ebooks.metadata.book.base import Metadata
 from calibre.utils.date import parse_date
 from calibre.utils.config import JSONConfig
 
-# clickable identifiers
-from calibre.ebooks.metadata.book.base import identifier_to_link_map
-
-identifier_to_link_map.update(
-    {
-        "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=%s",
-        "aladinseries": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=%s",
-    }
-)
-
 prefs = JSONConfig("plugins/AladinOpenAPI")
 prefs.defaults["ttb_key"] = ""
 
