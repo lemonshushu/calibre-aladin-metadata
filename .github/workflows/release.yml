@@ -1,0 +1,21 @@
+name: Build-and-release Calibre plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Package plugin
+      run: zip AladinMetadata.zip __init__.py
+    - name: Publish release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: AladinMetadata.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
