@@ -18,7 +18,7 @@ class AladinMetadata(Source):
     name = "Aladin Metadata"
     description = "aladin.co.kr에서 한국어 책 메타데이터와 표지를 가져옵니다."
     author = "Subin Song"
-    version = (1, 0, 0)
+    version = (1, 0, 2)
     minimum_calibre_version = (8, 0, 0)
     supported_platforms = ["windows", "osx", "linux"]
     languages = frozenset(["kor"])
